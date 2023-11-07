@@ -3,16 +3,20 @@ const cors = require('cors');
 require('dotenv').config()
 const { errorHandler } = require('./middleware/errorHandler');
 const CustomError = require('./middleware/utils/customError');
+const categoriesRouter = require('./routes/category.route');
 
 const app = express();
 
+// global middlewares
 app.use(cors());
 app.use(express.json());
 
-console.log(process.env)
+// application routes
+app.use('/api/v1/categories', categoriesRouter)
+
 
 app.get('/', (req, res, next) => {
-    next('this is error created me')
+    next('server running')
 })
 
 app.all('*', (req, res, next) => {
@@ -21,6 +25,7 @@ app.all('*', (req, res, next) => {
     next(error);
 })
 
+// global error handler middlware
 app.use(errorHandler)
 
 
