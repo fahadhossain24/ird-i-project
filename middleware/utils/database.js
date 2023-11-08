@@ -31,9 +31,20 @@ const getSubCategories = (queryParams) => {
     })
 }
 
+// get duas
+const getDuas = (queryParams) => {
+    return new Promise((resolve, reject) => {
+        const sql = "SELECT * FROM dua";
+        db.all(sql, queryParams, (err, data) => {
+            if(err) reject(err);
+            resolve(data);
+        })
+    })
+}
 
 module.exports = {
     db,
     getCategories,
     getSubCategories,
+    getDuas,
 }

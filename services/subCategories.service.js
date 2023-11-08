@@ -1,6 +1,6 @@
 const { getSubCategories } = require("../middleware/utils/database");
 
-exports.getSubCategoriesService = async() => {
-    const result = await getSubCategories([]);
+exports.getSubCategoriesService = async(queryParams) => {
+    const result = await getSubCategories(queryParams);
     return result;
 }

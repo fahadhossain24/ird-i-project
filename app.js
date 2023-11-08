@@ -5,6 +5,7 @@ const { errorHandler } = require('./middleware/errorHandler');
 const CustomError = require('./middleware/utils/customError');
 const categoriesRouter = require('./routes/category.route');
 const subCategoriesRouter = require('./routes/subCategory.route');
+const duas = require('./routes/duas.route');
 
 const app = express();
 
@@ -15,7 +16,7 @@ app.use(express.json());
 // application routes
 app.use('/api/v1/categories', categoriesRouter)
 app.use('/api/v1/subCategories', subCategoriesRouter)
-// app.use('/api/v1/duas', )
+app.use('/api/v1/duas', duas)
 
 
 app.get('/', (req, res, next) => {
