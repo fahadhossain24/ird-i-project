@@ -3,7 +3,8 @@ const subCategoriesService = require("../services/subCategories.service");
 
 exports.getSubCategories = async (req, res ,next) => {
     try {
-        const subCategories = await subCategoriesService.getSubCategoriesService([]);
+        const id = Number(req.params.id);
+        const subCategories = await subCategoriesService.getSubCategoriesService(id);
         if(subCategories.length === 0){
             const err = new CustomError('sub categories not found', 404);
             next(err);

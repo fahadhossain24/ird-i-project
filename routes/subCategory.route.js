@@ -5,6 +5,6 @@ const subCategoriesController = require('../controllers/subCategories.controller
 const subCategoriesRouter = express.Router();
 
 
-subCategoriesRouter.get('/', subCategoriesController.getSubCategories)
+subCategoriesRouter.get('/:id', subCategoriesController.getSubCategories)
 
 module.exports = subCategoriesRouter;
