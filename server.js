@@ -1,6 +1,6 @@
 const app = require('./app');
 const port = process.env.PORT || 7000;
-const database = require('./middleware/utils/database');
+const database = require('./utils/database');
 
 database.db
 

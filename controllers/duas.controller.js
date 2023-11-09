@@ -1,4 +1,4 @@
-const CustomError = require("../middleware/utils/customError");
+const CustomError = require("../utils/customError");
 const duasServices = require("../services/duas.service");
 
 exports.allDua = async (req, res, next) => {

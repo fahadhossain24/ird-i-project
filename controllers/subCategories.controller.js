@@ -1,4 +1,4 @@
-const CustomError = require("../middleware/utils/customError");
+const CustomError = require("../utils/customError");
 const subCategoriesService = require("../services/subCategories.service");
 
 exports.getSubCategories = async (req, res ,next) => {

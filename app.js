@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config()
 const { errorHandler } = require('./middleware/errorHandler');
-const CustomError = require('./middleware/utils/customError');
+const CustomError = require('./utils/customError');
 const categoriesRouter = require('./routes/category.route');
 const subCategoriesRouter = require('./routes/subCategory.route');
 const duas = require('./routes/duas.route');

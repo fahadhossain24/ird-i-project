@@ -1,4 +1,4 @@
-const { getDuasWithId, getCategoriesDuas, allDua } = require("../middleware/utils/database")
+const { getDuasWithId, getCategoriesDuas, allDua } = require("../utils/database")
 
 exports.allDuaService = async() => {
     const result = await allDua();
