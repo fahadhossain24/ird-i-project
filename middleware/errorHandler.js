@@ -14,6 +14,7 @@ const productionErrorResponse = (error, res) => {
     })
 }
 
+
 exports.errorHandler = (error, req, res, next) => {
     error.statusCode = error.statusCode || 500;
     error.status = error.status || 'server error';
